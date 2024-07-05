@@ -9,7 +9,8 @@
   "business_name",
   "business_location",
   "business_type",
-  "staff_tab"
+  "staff_tab",
+  "business_staff"
  ],
  "fields": [
   {
@@ -38,11 +39,17 @@
    "fieldname": "staff_tab",
    "fieldtype": "Tab Break",
    "label": "Staff"
+  },
+  {
+   "fieldname": "business_staff",
+   "fieldtype": "Table",
+   "label": "Business Staff",
+   "options": "ClearBusiness Staff"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-05 11:00:56.167098",
+ "modified": "2024-07-05 11:36:18.990943",
  "modified_by": "Administrator",
  "module": "ClearDocs Pro",
  "name": "ClearBusiness",
