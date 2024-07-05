@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:first_name",
+ "creation": "2024-07-05 11:03:53.966572",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "full_name",
+  "resident_status",
+  "visa_type",
+  "column_break_xbol",
+  "personnel_type",
+  "business",
+  "primary_personnel",
+  "section_break_wjfy",
+  "email_address",
+  "column_break_eckn",
+  "phone_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "resident_status",
+   "fieldtype": "Select",
+   "label": "Resident Status",
+   "options": "\nVisitor\nResident\nEmirati",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visa_type",
+   "fieldtype": "Select",
+   "label": "VISA Type",
+   "options": "\nGolden VISA\nGreen VISA\nEmployee VISA\nFamily VISA\nHouse Visa\nVisitor VISA",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xbol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "personnel_type",
+   "fieldtype": "Select",
+   "label": "Personnel Type",
+   "options": "\nIndividual\nBusiness Staff\nDependent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_wjfy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "column_break_eckn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "depends_on": "eval:doc.personnel_type == \"Business Staff\"",
+   "fieldname": "business",
+   "fieldtype": "Link",
+   "label": "Business",
+   "mandatory_depends_on": "eval:doc.personnel_type == \"Business Staff\"",
+   "options": "ClearBusiness"
+  },
+  {
+   "depends_on": "eval:doc.personnel_type == \"Dependent\"",
+   "fieldname": "primary_personnel",
+   "fieldtype": "Link",
+   "label": "Primary Personnel",
+   "mandatory_depends_on": "eval:doc.personnel_type == \"Dependent\"",
+   "options": "ClearPersonnel"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-05 11:31:58.032104",
+ "modified_by": "Administrator",
+ "module": "ClearDocs Pro",
+ "name": "ClearPersonnel",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:business_name",
+ "creation": "2024-07-05 10:55:34.587295",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "business_name",
+  "business_location",
+  "business_type",
+  "staff_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "business_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Business Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "business_location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Business Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Business Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "staff_tab",
+   "fieldtype": "Tab Break",
+   "label": "Staff"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-05 11:00:56.167098",
+ "modified_by": "Administrator",
+ "module": "ClearDocs Pro",
+ "name": "ClearBusiness",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
